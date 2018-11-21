@@ -6,7 +6,14 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
       data[i] = s.get(i);
     }
   }
+  public char charAt(int index){
+    if (index < 0 || index > this.length()){
+      throw IndexOutOfBoundsException;
+    }
+    return data[index];
+  }
 
 
 
   }
+l
