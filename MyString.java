@@ -12,6 +12,13 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
     }
     return data[index];
   }
+  public String toString(){
+    String str = "";
+    for (int i = 0; i < this.length(); i++){
+      str += charAt(i);
+    }
+    return str;
+  }
 
 
 
