@@ -22,7 +22,7 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
   public CharSequence subSequence(int start, int end){
     CharSequence FirstSub = new ReversedCharSequence(RevSeq.substring(start, end));
     String MidSub = "";
-    for(int i = 0; i < SubFirst.length(); i++){
+    for(int i = 0; i < FirstSub.length(); i++){
       MidSub += SubFirst.charAt(i);
     }
     ReversedCharSequence FinalSub = new ReversedCharSequence(MidSub);
