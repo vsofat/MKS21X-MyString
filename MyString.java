@@ -44,10 +44,9 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
           return (this.charAt(index) - seq.charAt(index));
         }
       }
-      return this.length() - seq.length();
-    }
-    if (this.length() != other.length()){
-      return this.length() - other.length();
+      if (this.length() != seq.length()){
+        return this.length() - seq.length();
+      }
     }
    return 0;
   }
