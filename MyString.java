@@ -20,7 +20,13 @@ public class MyString implements CharSequence{
     return str;
   }
   public CharSequence subSequence(int start, int end){
-    return "" ;
+    String output = "";
+    int len = data.length;
+    if (start < 0 || end < 0 || end > len || start > end) throw new IndexOutOfBoundsException();
+    for (int x = start; x < end; x ++) {
+      output += data[x];
+    }
+    return output;
   }
 
   public int length() {
