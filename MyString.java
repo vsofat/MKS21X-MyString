@@ -1,4 +1,4 @@
-public class MyString implements CharSequence{
+public class MyString implements CharSequence,Comparable<CharSequence>{
   private char[] data;
   public MyString(CharSequence s){
     data = new char[s.length()];
@@ -28,8 +28,7 @@ public class MyString implements CharSequence{
     for (int x = start; x < end; x ++) {
       result += charAt(x);
     }
-    CharSequence sub = new MyString(result);
-    return sub;
+    return new MyString(result);
   }
   public int length() {
    return data.length;
