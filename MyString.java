@@ -3,13 +3,14 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
   public MyString(CharSequence s){
     data = new char[s.length()];
     for (int index = 0; index < s.length(); index++){
-      data[index] = charAt(index);
+      data[index] = s.charAt(index);
     }
   }
   public char charAt(int index){
-    if (index < 0 || index > this.length()){
+    if (index < 0 || index >= this.length()){
       throw new IndexOutOfBoundsException("Index was out of bounds: index was less than 0 or greater than the length of the CharSequence.");
     }
+  //  System.out.println(data[index]);
     return data[index];
   }
   public String toString(){
@@ -35,7 +36,7 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
  }
  public int compareTo(CharSequence seq) {
     if (seq == null) {
-      throw new NullPointerException("The value of a was null.");
+      throw new NullPointerException("The value of the given CharSequence was/had a null.");
     }
     else {
       int result = 0;
